@@ -1,8 +1,11 @@
 node_modules/
 dist/
 .expo/
-android/
 ios/
 *.tsbuildinfo
 .env
 .env.local
+
+# Android build outputs (keep source, ignore builds)
+android/app/build/
+android/.gradle/
