@@ -37,12 +37,6 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   plugins: [
     'expo-location',
     'expo-sensors',
-    [
-      'react-native-wifi-reborn',
-      {
-        fineLocationPermission:
-          'WiFi Mapper needs your location to scan nearby WiFi networks.',
-      },
-    ],
+    'react-native-wifi-reborn',
   ],
 });
