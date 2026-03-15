@@ -6,7 +6,6 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   slug: 'wifi-mapper',
   version: '1.0.0',
   orientation: 'portrait',
-  icon: './assets/icon.png',
   userInterfaceStyle: 'dark',
   splash: {
     backgroundColor: '#1a1a2e',
@@ -33,6 +32,17 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
       'CHANGE_WIFI_STATE',
       'HIGH_SAMPLING_RATE_SENSORS',
     ],
+    versionCode: 1,
   },
-  plugins: ['expo-location', 'expo-sensors'],
+  plugins: [
+    'expo-location',
+    'expo-sensors',
+    [
+      'react-native-wifi-reborn',
+      {
+        fineLocationPermission:
+          'WiFi Mapper needs your location to scan nearby WiFi networks.',
+      },
+    ],
+  ],
 });
